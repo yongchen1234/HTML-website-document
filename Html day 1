@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Spectral, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url(data:image/jpeg;base64,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);
+  background-repeat:no repeat;
+  background-size: 300px 380px;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Poems</h1>
+  <p>A <h3>诗歌选集</h3> website</p>
+</div>
+
+<div class="navbar">
+  <a href="https://baike.baidu.com/item/%E4%BA%91%E6%B8%AF%E8%8A%B1%E5%9B%AD" target="_blank"  class="active">Home</a>
+  <a href="http://www.bilibili.com" target="_blank">Bilibili</a>
+  <a href="https://concernedape.bandcamp.com/track/winter-nocturne-of-ice" target="_blank"   >  Music be with</a>
+  <a href="https://www.gushiwen.org/gushi/tangshi.aspx" target="_blank" class="right" >Learn more</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
