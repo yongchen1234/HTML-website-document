@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Spectral, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url(data:image/jpeg;base64,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);
+  background-repeat:no repeat;
+  background-size: 300px 380px;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Poems</h1>
+  <p>A <h3>诗歌选集</h3> website</p>
+</div>
+
+<div class="navbar">
+  <a href="https://baike.baidu.com/item/%E4%BA%91%E6%B8%AF%E8%8A%B1%E5%9B%AD" target="_blank"  class="active">Home</a>
+  <a href="http://www.bilibili.com/" target="_blank">Bilibili</a>
+  <a href="https://concernedape.bandcamp.com/track/winter-nocturne-of-ice" target="_blank"   >  Music be with</a>
+  <a href="https://www.gushiwen.org/gushi/tangshi.aspx" target="_blank" class="right" >Learn more</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Chinese Poetry and Chinese culture</h2>
+    <h5>Ancient Chinese draing with poetry on it.</h5>
+    <img src="data:image/jpeg;base64,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">
+    
+    <h3>Tang Dynasty唐代</h3>
+    <p>most famous, and biggest era of Poetry</p>
+    <img src="https://images.chinahighlights.com/allpicture/2017/04/tang.jpg" height=200" width="300"><br></br>
+    <div class="fakeimg" style="height:60px;">
+    </div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
+</html>
