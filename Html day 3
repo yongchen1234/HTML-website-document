@@ -1,0 +1,152 @@
+.navbar {
+  overflow: hidden;
+  background-color: #0c1127;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 40px;
+  text-align: center;
+  background:#282d40;
+}
+.footer2{
+  padding: 20px;
+  text-align:left;
+  background: #0c1127 ;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+}
+
+  h3.Head{
+    font-style:italic;
+}
+  
+  h5.drawing{
+    font-style:italic;
+}
+  
+  h2.Title{
+    font-size:31
+}
+  
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2 class="Title">Chinese Poetries</h2>
+  <p>A <h3 class="Head">唐代诗歌</h3> Website</p class="Head">
+</div>
+
+<div class="navbar">
+  <a href="https://baike.baidu.com/item/%E4%BA%91%E6%B8%AF%E8%8A%B1%E5%9B%AD" target="_blank"  class="active">Home</a>
+  <a href="http://www.bilibili.com/" target="_blank">Bilibili</a>
+  <a href="https://concernedape.bandcamp.com/track/winter-nocturne-of-ice" target="_blank"   >  Music be with</a>
+  <a href="https://www.gushiwen.org/gushi/tangshi.aspx" target="_blank" class="right" >Learn more</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Chinese Poetry and the Tang Dynasty</h2>
+    <h5 class="Drawing">A Chinese drawing with a poetry on it.</h5>
+    <img src="http://i.epochtimes.com/assets/uploads/2016/12/201609131-600x400.jpg" height="200" width="360" > 
+    <h3>Tang Dynasty唐代</h3>
+    <p>Biggest Poetry era in Chinese History</p>
+    <img src="https://images.chinahighlights.com/allpicture/2017/04/tang.jpg" height="200" width="360" > 
+    <p>The Tang Dynasty's map in modern China's map</p>
+    <img src="http://s16.sinaimg.cn/bmiddle/52453ebd451f609a9e9bf" height="200" width="360">
+    <p>The population growth while in Tang Dynasty</p> 
+    <img src="https://pic1.zhimg.com/v2-98d239486b2bcd621a642c7b05dd566e_1200x500.jpg" height="200" width="360"> 
+    <p>A Tang buliding sit in the Middle of China</p>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+<div class="footer2"></div>
+
+</body>
+</html>
+</html>
