@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Spectral, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url(data:image/jpeg;base64,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);
+  background-repeat:no repeat;
+  background-size: 300px 380px;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.flex {
+  background-color: #6c6eb2;
+  width: 100%;
+  padding: 20px;
+  border:double;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #0c1127;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Column {
+  float: middle;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.Row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Footer */
+.footer {
+  padding: 40px;
+  text-align: left;
+  background:#282d40;
+}
+.footer2{
+  padding: 20px;
+  text-align:left;
+  background: #0c1127 ;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+}
+  h3.H{
+font-style:italic;
+}
+  
+  h5.drawing{
+    font-style:italic;
+}
+
+.italic{
+  font-style:italic;
+}
+
+  
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chinese Poetries</h1>
+  <p>A <h3 class="H">唐代诗歌</h3> Website</p class="Head">
+</div>
+  
+<div class="navbar">
+  <a href="https://baike.baidu.com/item/%E4%BA%91%E6%B8%AF%E8%8A%B1%E5%9B%AD" target="_blank"  class="active">Home</a>
+  <a href="http://www.bilibili.com/" target="_blank">Bilibili</a>
+  <a href="https://concernedape.bandcamp.com/track/winter-nocturne-of-ice" target="_blank"   >  Music be with</a>
+  <a href="https://steamuserimages-a.akamaihd.net/ugc/264970884434080342/FA5C1B6BA0903F2B58B5BD64F910E5C4F47387C3/" target="_blank"> YongC</a> 
+  <a href="https://www.gushiwen.org/gushi/tangshi.aspx" target="_blank" class="right" >Learn more</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Chinese Poetry and the Tang Dynasty(in a nutshell)</h2>
+    <h5 class="Drawing">A Chinese drawing with a poetry on it.</h5>
+    <img src="http://i.epochtimes.com/assets/uploads/2016/12/201609131-600x400.jpg" height="200" width="360" > 
+    <h3>Tang Dynasty唐代</h3>
+    <p>Biggest Poetry era in Chinese History<h5>(639-821)</h5></p>
+    <img src="https://images.chinahighlights.com/allpicture/2017/04/tang.jpg" height="200" width="360" > 
+    <p>The Tang Dynasty's map in modern China's map</p>
+    <img src="http://s16.sinaimg.cn/bmiddle/52453ebd451f609a9e9bf" height="200" width="360">
+    <p>The population growth while in Tang Dynasty</p> 
+    <img src="https://pic1.zhimg.com/v2-98d239486b2bcd621a642c7b05dd566e_1200x500.jpg" height="200" width="360"> 
+    <p>A Tang buliding that is currently sitting in the Middle of China</p>
+  </div>
+  <div class="main">
+  <h2>Li Bai李白--------------------------------------------------Du Fu杜甫</h2>
+  <h5>Two poetry writers and good friends in Tang</h5>
+    <div class="Row">
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>送友人</h4>
+       <p class="italic"><青山横北郭，白水绕东城。
+       此地一为别，孤蓬万里征。
+       浮云游子意，落日故人情。
+       挥手自兹去，萧萧班马鸣。></p></div>
+      </div>
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>春望</h4>
+       <p class="italic">
+       <国破山河在，城春草木深。
+        感时花溅泪，恨别鸟惊心。
+        烽火连三月，家书抵万金。
+        白头搔更短，浑欲不胜簪。></p></div>
+      </div>
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>闻王昌龄左迁龙标遥有此寄</h4>
+       <p class="italic">
+       <杨花落尽子规啼，闻道龙标过五溪。
+        我寄愁心与明月，随风直到夜郎西。></p></div>
+      </div>
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>望岳</h4>
+       <p class="italic">
+       <岱宗夫如何？齐鲁青未了。
+        造化钟神秀，阴阳割昏晓。
+        荡胸生曾云，决眦入归鸟。
+        会当凌绝顶，一览众山小。></p></div>
+      </div>
+    </div>
+    <h4>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</h4>
+    <br>
+    <h2>Wang Wei王维-------------------------------------------Bai JuYi白居易</h2>
+    <h5>They were honored by "Intellgence" and "The King of Poemtries" in Tang </h5>
+    <div class="Row">
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>使至塞上</h4>
+       <p class="italic">
+       <单车欲问边，属国过居延。
+        征蓬出汉塞，归雁入胡天。
+        大漠孤烟直，长河落日圆。
+        萧关逢候骑，都护在燕然。></p></div>
+      </div>
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>钱塘湖春行</h4>
+       <p class="italic">
+       <孤山寺北贾亭西，水面初平云脚低。
+        几处早莺争暖树，谁家新燕啄春泥。
+        乱花渐欲迷人眼，浅草才能没马蹄。
+        最爱湖东行不足，绿杨阴里白沙堤。></p></div>
+      </div>
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>竹里馆</h4>
+       <p class="italic">
+       <独坐幽篁里，弹琴复长啸。
+        深林人不知，明月来相照。></p></div>
+      </div>
+      <div class="Column">
+       <div class="flex" style="height:200px;">
+       <h4>忆江南词三首</h4>
+       <p class="italic">
+       <江南好，风景旧曾谙。日出江花红胜火，春来江水绿如蓝。能不忆江南？
+        江南忆，最忆是杭州。山寺月中寻桂子，郡亭枕上看潮头。何日更重游！
+        江南忆，其次忆吴宫。吴酒一杯春竹叶，吴娃双舞醉芙蓉。早晚复相逢！></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h3>Contact with the editor of this website within:</h3>
+  <h5>2022yongchen@holyfamily.dbq.pvt.k12.ia.us-</h5>
+  <h5>acider0708@gmail.com-</h5>
+  <h5>1579824009@qq.com-</h5>
+</div>
+
+<div class="footer2">
+</div>
+
+
+</body>
+</html>
+</html>
